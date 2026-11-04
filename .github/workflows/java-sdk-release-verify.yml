@@ -67,7 +67,7 @@ jobs:
   source-release:
     name: Source release builds cleanly
     if: github.event_name != 'workflow_dispatch'
-    runs-on: ubuntu-latest
+    runs-on: incredibuild-ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
@@ -124,7 +124,7 @@ jobs:
   artifact:
     name: Staged artifacts pass the reviewer checklist
     if: github.event_name == 'workflow_dispatch'
-    runs-on: ubuntu-latest
+    runs-on: incredibuild-ubuntu-latest
     steps:
       - name: Checkout tag
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1
