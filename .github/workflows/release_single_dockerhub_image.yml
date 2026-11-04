@@ -158,7 +158,7 @@ jobs:
   merge-images:
     timeout-minutes: 5
     name: "Merge: ${{ inputs.airflowVersion }}, ${{ inputs.pythonVersion }}"
-    runs-on: ["ubuntu-22.04"]
+    runs-on: ["incredibuild-ubuntu-2204"]
     needs: [build-images]
     env:
       AIRFLOW_VERSION: ${{ inputs.airflowVersion }}
