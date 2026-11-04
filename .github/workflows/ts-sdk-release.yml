@@ -46,7 +46,7 @@ concurrency:
 jobs:
   build:
     name: Verify and package release
-    runs-on: ubuntu-latest
+    runs-on: incredibuild-ubuntu-latest
     outputs:
       artifact_name: ${{ steps.package.outputs.artifact_name }}
       package_file: ${{ steps.package.outputs.package_file }}
@@ -168,7 +168,7 @@ jobs:
   publish:
     name: ${{ inputs.release_type == 'staged' && 'Stage release on npm' || 'Publish formal release to npm' }}
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: incredibuild-ubuntu-latest
     environment:
       name: ts-sdk-npm-release
     permissions:
