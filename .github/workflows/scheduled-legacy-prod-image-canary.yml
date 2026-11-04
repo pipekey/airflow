@@ -166,7 +166,7 @@ jobs:
   verify-legacy-flavor:
     name: "Verify legacy bookworm flavor ${{ matrix.python-version }}"
     needs: [build-info, build-prod-images]
-    runs-on: ["ubuntu-22.04"]
+    runs-on: ["incredibuild-ubuntu-2204"]
     timeout-minutes: 20
     strategy:
       fail-fast: false
