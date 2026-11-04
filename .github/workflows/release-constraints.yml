@@ -197,7 +197,7 @@ jobs:
       SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
   publish-constraints:
-    runs-on: ["ubuntu-22.04"]
+    runs-on: ["incredibuild-ubuntu-2204"]
     timeout-minutes: 20
     name: "Publish and tag constraints"
     needs: [build-info, generate-constraints]

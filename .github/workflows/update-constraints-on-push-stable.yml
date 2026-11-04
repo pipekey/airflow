@@ -114,7 +114,7 @@ jobs:
       SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
   update-constraints:
-    runs-on: ["ubuntu-22.04"]
+    runs-on: ["incredibuild-ubuntu-2204"]
     timeout-minutes: 20
     name: "Commit and push constraints"
     needs: [build-info, generate-constraints]

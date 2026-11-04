@@ -55,7 +55,7 @@ jobs:
     outputs:
       draft-changes: ${{ steps.reconcile.outputs.draft-changes }}
     # The breeze action frees disk space with sudo and docker, which ubuntu-slim does not provide.
-    runs-on: ubuntu-latest
+    runs-on: incredibuild-ubuntu-latest
     timeout-minutes: 20
     steps:
       # What earlier runs reported, so that a problem that persists is posted to Slack once
@@ -160,7 +160,7 @@ jobs:
       # The draft state, and removing `fork ci required` from a released pull request once it
       # is undrafted.
       pull-requests: write
-    runs-on: ubuntu-latest
+    runs-on: incredibuild-ubuntu-latest
     timeout-minutes: 10
     steps:
       # The pull requests whose change failed last time, so a persisting failure is posted to
