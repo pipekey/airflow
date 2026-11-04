@@ -112,7 +112,7 @@ jobs:
     needs: detect-languages
     # Skip entirely when no scannable language changed (e.g. docs-only PRs).
     if: needs.detect-languages.outputs.languages != '[]'
-    runs-on: ["ubuntu-22.04"]
+    runs-on: ["incredibuild-ubuntu-2204"]
     strategy:
       fail-fast: false
       matrix:
