@@ -54,7 +54,7 @@ concurrency:
 jobs:
   approve-workflow-runs:
     name: "Approve workflow runs of external contributors"
-    runs-on: ubuntu-latest
+    runs-on: incredibuild-ubuntu-latest
     if: github.repository == 'apache/airflow'
     timeout-minutes: 20
     steps:
